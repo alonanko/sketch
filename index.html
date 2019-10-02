@@ -1,0 +1,47 @@
+<link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+</body>
+
+<script>  
+    function genGrid(v){
+        var board = document.body;
+        for(i=0;i<v;i++){
+            var row = document.createElement("div");
+            row.classList.add("row");
+            //genRow
+            for(x=1; x<=v; x++){
+                square = document.createElement("div");
+                square.classList.add("square");
+                square.id = x+v*i;
+                row.appendChild(square);
+            }
+            board.appendChild(row);
+        }
+    }
+    genGrid(16);
+
+    function draw(){
+        this.classList.add("drawn");
+    }
+
+    function clearPage(){
+        const squares = Array.from(document.getElementsByClassName("square"));
+        squares.forEach(square => {square.classList.remove("drawn")});
+    }
+
+    const squares = Array.from(document.getElementsByClassName("square"));
+    squares.forEach(square => {square.addEventListener("mouseover", draw)});
+
+    document.addEventListener("click", clearPage);
+
+    
+
+
+</script>
+</html>
+

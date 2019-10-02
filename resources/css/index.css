@@ -1,0 +1,16 @@
+.square{
+    display:inline;
+    border: 1px solid blue;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.row{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.drawn{
+    background-color: grey;
+}
