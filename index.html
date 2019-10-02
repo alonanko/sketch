@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Etch-A-Sketch</title>
 </head>
 <body>
+    <h1 style="text-align: center">Etch-A-Sketch</h1>
 </body>
 
 <script>  
     function genGrid(v){
         var board = document.body;
+        board.classList.add("board");
         for(i=0;i<v;i++){
             var row = document.createElement("div");
             row.classList.add("row");
@@ -23,7 +25,8 @@
             board.appendChild(row);
         }
     }
-    genGrid(16);
+    const v = prompt("how many cells?");
+    genGrid(v);
 
     function draw(){
         this.classList.add("drawn");
